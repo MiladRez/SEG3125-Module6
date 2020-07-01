@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <title>Apple Questionnaire</title>
+	<link rel="stylesheet" href="/assets/styles.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+</head>
+
+<body>
+    <div id="survey_title">
+        <h1>Apple UI Survey</h1>
+    </div>
+
+    <div id="link_to_site">
+        <h3>What do you think of the UI implemented on <a href="https://www.apple.com/ca/" target="_blank">Apple's website</a>?</h3>
+        <a href="https://www.apple.com/ca/" target="_blank">
+            <img src="/assets/appleSite.png" alt="https://www.apple.com/ca/" width="659" height="390">
+        </a>
+    </div>
+
+    <form>
+		<div class="form-group">
+			<div class="questions" id="textbox">
+				<div class="form-group">
+					<label for="open_ended_q">Which colours do you think are a good design choice for this UI and explain why.</label>
+					<textarea name="colours_design" class="form-control" id="open_ended_q" rows="7" required></textarea>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="questions">
+				<p><strong>What is the first thing that stood out to you when you visited the website?</strong></p>
+				<input type="radio" id="nav" name="stand_out" value="Navigation bar">
+				<label for="nav">Navigation bar</label><br>
+
+				<input type="radio" id="product" name="stand_out" value="Headlined product">
+				<label for="product">Headlined product</label><br>
+
+				<input type="radio" id="support" name="stand_out" value="Support link">
+				<label for="support">Support link</label><br>
+
+				<input type="radio" id="buy" name="stand_out" value="Learn more/Buy link options">
+				<label for="buy">Learn more/Buy link options</label><br>
+
+				<input type="radio" id="other" name="stand_out" value="Other/Overwhelmed with UI">
+				<label for="other">Other/Overwhelmed with UI</label><br>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="questions">
+				<p><strong>Which element of the UI do you think needs the most improvement?</strong></p>
+				<label>Choose one element:</label>
+				<select name="elem_need_improvement">
+					<option value="Navigation bar" selected="selected">Navigation bar</option>
+					<option value="Product display">Product display</option>
+					<option value="Colour design">Colour design</option>
+					<option value="Contact support information">Contact support information</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="questions">
+				<p><strong>Which key UI design principles does the website follow?</strong></p>
+				<input type="checkbox" id="simple" name="design_principles" value="Simple and clear design">
+				<label for="simple">Simple and clear design</label><br>
+
+				<input type="checkbox" id="colour" name="design_principles" value="Effective use of colours">
+				<label for="colour">Effective use of colours</label><br>
+
+				<input type="checkbox" id="info" name="design_principles" value="Informative">
+				<label for="info">Informative</label><br>
+
+				<input type="checkbox" id="interact" name="design_principles" value="Easy to interact with">
+				<label for="interact">Easy to interact with</label><br>
+
+				<input type="checkbox" id="consistent" name="design_principles" value="Consistent design">
+				<label for="consistent">Consistent design</label><br>
+
+				<input type="checkbox" id="organized" name="design_principles" value="Organized interface">
+				<label for="organized">Organized interface</label><br>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="questions">
+				<p><strong>How likely are you to buy a product from this website strictly based on their UI design
+						presentation?</strong></p>
+				<p id="slider">Not likely <input type="range" name="likely_buy_product" min="1" max="100"
+						value="50"> Very
+					likely</p>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="questions" id="textbox">
+				<div class="form-group">
+					<label for="comments">Please comment down below any additional feedback you would like to provide.</label>
+					<textarea name="comments" class="form-control" id="comments" rows="7" required></textarea>
+				</div>
+			</div>
+		</div>
+		
+		<center>
+			<button type="submit" class="btn btn-success" id="bb">Submit</button>
+		</center>
+        
+	</form>
+	<script src="/assets/action.js"></script>
+</body>
+
+<footer>Website designed by Milad Rezaee</footer>
+
+</html>

@@ -1,0 +1,44 @@
+<html lang="en-US">
+<head>
+    <title>Survey Analysis</title>
+</head>
+
+<body>
+    <h1>Survey analysis</h1>
+    <h2>Which colours do you think are a good design choice for this UI and explain why.</h2>
+    <ul>
+    <% for (var i=0; i<results[0].length; i++){ %>
+        <li><%= results[0][i].colours_design %> :  <%= results[0][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>What is the first thing that stood out to you when you visited the website?</h2>
+    <ul>
+    <% for (var i=0; i<results[1].length; i++){ %>
+        <li><%= results[1][i].stand_out %> :  <%= results[1][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Which element of the UI do you think needs the most improvement?</h2>
+    <ul>
+    <% for (var i=0; i<results[2].length; i++){ %>
+        <li><%= results[2][i].elem_need_improvement %> :  <%= results[2][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Which key UI design principles does the website follow?</h2>
+    <ul>
+    <% for (var i=0; i<results[3].length; i++){ %>
+        <li><%= results[3][i].design_principles %> :  <%= results[3][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>How likely are you to buy a product from this website strictly based on their UI design presentation?</h2>
+    <ul>  
+    <li>Not likely: <%= results[4][0].count %></li> 
+    <li>Very likely: <%= results[4][1].count %></li> 
+    </ul>
+    <h2>Please comment down below any additional feedback you would like to provide.</h2>
+    <ul>
+    <% for (var i=0; i<results[5].length; i++){ %>
+        <li><%= results[5][i].comments %> :  <%= results[5][i].count %></li>
+    <% } %>    
+    </ul>
+</body>
+</html>
